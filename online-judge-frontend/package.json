@@ -1,0 +1,37 @@
+{
+  "name": "online-judge-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@bytemd/plugin-gemoji": "^1.21.0",
+    "@bytemd/plugin-gfm": "^1.21.0",
+    "@bytemd/plugin-highlight": "^1.21.0",
+    "@bytemd/plugin-highlight-ssr": "^1.21.0",
+    "@bytemd/plugin-math": "^1.21.0",
+    "@bytemd/vue-next": "^1.21.0",
+    "axios": "^1.5.0",
+    "bytemd": "^1.21.0",
+    "core-js": "^3.8.3",
+    "moment": "^2.29.4",
+    "monaco-editor": "^0.43.0",
+    "monaco-editor-webpack-plugin": "^7.1.0",
+    "vue": "^3.2.13",
+    "vue-router": "^4.0.3",
+    "vuex": "^4.0.0"
+  },
+  "devDependencies": {
+    "@arco-design/web-vue": "^2.51.2",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-typescript": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "@vue/eslint-config-typescript": "^9.1.0",
+    "openapi-typescript-codegen": "^0.25.0",
+    "typescript": "~4.5.5"
+  }
+}

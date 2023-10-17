@@ -1,0 +1,37 @@
+server:
+  port: 8173
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      routes:
+        - id: online-judge-backend-user-service
+          uri: lb://online-judge-backend-user-service
+          predicates:
+            - Path=/api/user/**
+        - id: online-judge-backend-question-service
+          uri: lb://online-judge-backend-question-service
+          predicates:
+            - Path=/api/question/**
+        - id: online-judge-backend-judge-service
+          uri: lb://online-judge-backend-judge-service
+          predicates:
+            - Path=/api/judge/**
+  # gateway 组件中的 spring-boot-starter-webflux 和 springboot作为 web 项目启动必不可少的 spring-boot-starter-web 出现冲突。
+  main:
+    web-application-type: reactive
+  application:
+    name: online-judge-backend-gateway
+knife4j:
+  gateway:
+    # 开启 gateway 聚合组件
+    enabled: true
+    # 设置聚合模式采用 discover 服务发现的模式
+    strategy: discover
+    discover:
+      # 开启 discover 模式
+      enabled: true
+      # 聚合子服务全部为 Swagger2 规范的文档
+      version: swagger2
